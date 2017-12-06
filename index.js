@@ -204,7 +204,7 @@ MetadataHandler.prototype.shareMetadata = function (infoHash, cb) {
       name: dataFileName,                 // name of the torrent (default = basename of `path`)
       comment: 'Colored Coins Metadata',  // free-form textual comments of the author
       createdBy: 'ColoredCoins-1.0.0',    // name and version of program used to create torrent
-      announceList: self.announce,        // custom trackers (array of arrays of strings) (see [bep12](http://www.bittorrent.org/beps/bep_0012.html))
+      announce: self.announce,        // custom trackers (array of arrays of strings) (see [bep12](http://www.bittorrent.org/beps/bep_0012.html))
       urlList: self.urlList               // web seed urls (see [bep19](http://www.bittorrent.org/beps/bep_0019.html))
     }
     self.client.seed(dataFilePath, opts, function (torrent) {
